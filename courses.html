@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>MFK GENIUS ACADEMY - Board Selection</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: lightblue;
+        }
+
+        nav {
+            background-color: darkblue;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 20px;
+        }
+
+        nav a:hover {
+            color: yellow;
+        }
+
+        .board-page {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .board-page h1 {
+            color: darkblue;
+            font-size: 50px;
+        }
+
+        .intro {
+            font-size: 21px;
+            margin-bottom: 40px;
+        }
+
+        .board-box {
+            background-color: white;
+            width: 300px;
+            max-width: 85%;
+            display: inline-block;
+            vertical-align: top;
+            margin: 15px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+.board-box {
+    transition: all 0.3s ease;
+}
+
+.board-box:hover {
+    background-color: #dbeafe;
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+        .board-box h2 {
+            color: darkblue;
+            font-size: 28px;
+        }
+
+        .board-box p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .open-button {
+            display: inline-block;
+            background-color: darkblue;
+            color: white;
+            text-decoration: none;
+            padding: 12px 35px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .open-button:hover {
+            background-color: blue;
+            transform: scale(1.05);
+        }
+
+        .coming-button {
+            display: inline-block;
+            background-color: gray;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: green;
+            color: white;
+            text-decoration: none;
+            padding: 13px 30px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .back-button:hover {
+            background-color: darkgreen;
+        }
+
+        @media (max-width: 750px) {
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+                font-size: 16px;
+            }
+
+            .board-page h1 {
+                font-size: 38px;
+            }
+
+            .board-box {
+                width: 80%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <nav>
+
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="courses.html">COURSES</a>
+        <a href="contact.html">CONTACT</a>
+
+    </nav>
+
+
+    <div class="board-page">
+
+        <h1>Choose Your Board</h1>
+
+        <p class="intro">
+            Select your education board to explore available courses.
+        </p>
+
+
+        <!-- FEDERAL BOARD -->
+
+        <div class="board-box">
+
+            <h2>🇵🇰 Federal Board</h2>
+
+            <p>
+                Explore our complete Federal Board courses
+                and subject-wise lessons.
+            </p>
+
+            <a href="federal-courses.html" class="open-button">
+                OPEN
+            </a>
+
+        </div>
+
+
+        <!-- PUNJAB BOARD -->
+
+        <div class="board-box">
+
+            <h2>Punjab Board</h2>
+
+            <p>
+                Punjab Board courses are currently
+                under development.
+            </p>
+
+            <span class="coming-button">
+                COMING SOON
+            </span>
+
+        </div>
+
+
+        <!-- PESHAWAR BOARD -->
+
+        <div class="board-box">
+
+            <h2>Peshawar Board</h2>
+
+            <p>
+                Peshawar Board courses are currently
+                under development.
+            </p>
+
+            <span class="coming-button">
+                COMING SOON
+            </span>
+
+        </div>
+
+
+        <br>
+
+        <a href="index.html" class="back-button">
+            ← Back to Home
+        </a>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>MFK GENIUS ACADEMY - Home</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #eef6fa;
+            color: #222;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background-color: #071952;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+
+        /* HERO SECTION */
+
+        .hero {
+            min-height: 600px;
+            background:
+                linear-gradient(
+                    rgba(7,25,82,0.92),
+                    rgba(10,55,120,0.88)
+                );
+
+            color: white;
+            text-align: center;
+            padding: 110px 20px 90px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-size: 65px;
+            margin: 0 0 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero h2 {
+            font-size: 30px;
+            margin: 0 0 25px;
+            color: #ffd700;
+        }
+
+        .hero p {
+            max-width: 750px;
+            font-size: 20px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .hero-button {
+            display: inline-block;
+            background-color: #ffd700;
+            color: #071952;
+            text-decoration: none;
+            padding: 16px 38px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .hero-button:hover {
+            background-color: white;
+            transform: translateY(-5px);
+        }
+
+
+        /* WELCOME */
+
+        .welcome {
+            text-align: center;
+            padding: 70px 20px 40px;
+        }
+
+        .welcome h2 {
+            color: #071952;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .welcome p {
+            max-width: 800px;
+            margin: auto;
+            font-size: 19px;
+            line-height: 1.7;
+        }
+
+
+        /* STATS */
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 30px 20px 70px;
+        }
+
+        .stat-box {
+            background-color: white;
+            width: 220px;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            transition: transform 0.3s;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-8px);
+        }
+
+        .stat-box h3 {
+            color: #071952;
+            font-size: 35px;
+            margin: 0 0 10px;
+        }
+
+        .stat-box p {
+            font-size: 17px;
+            margin: 0;
+        }
+
+
+        /* COURSES */
+
+        .courses-section {
+            background-color: white;
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .courses-section h2 {
+            color: #071952;
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .section-description {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .course-card {
+            width: 250px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 15px;
+            padding: 30px 20px;
+            background-color: #eef6fa;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+        }
+
+        .course-icon {
+            font-size: 45px;
+        }
+
+        .course-card h3 {
+            color: #071952;
+            font-size: 25px;
+        }
+
+        .course-card p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .course-link {
+            display: inline-block;
+            background-color: #071952;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .course-link:hover {
+            background-color: #123ca0;
+        }
+
+
+        /* WHY CHOOSE US */
+
+        .why-section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .why-section h2 {
+            color: #071952;
+            font-size: 42px;
+            margin-bottom: 40px;
+        }
+
+        .why-box {
+            display: inline-block;
+            vertical-align: top;
+            width: 270px;
+            margin: 15px;
+            padding: 30px 20px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+        }
+
+        .why-box h3 {
+            color: #071952;
+            font-size: 23px;
+        }
+
+        .why-box p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+
+        /* FINAL CTA */
+
+        .cta {
+            background-color: #071952;
+            color: white;
+            text-align: center;
+            padding: 70px 20px;
+        }
+
+        .cta h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            font-size: 19px;
+            margin-bottom: 30px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+            background-color: #041235;
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+        }
+
+        footer p {
+            margin: 5px;
+            font-size: 15px;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            nav a {
+                display: inline-block;
+                margin: 8px;
+                font-size: 16px;
+            }
+
+            .hero {
+                min-height: 500px;
+                padding: 80px 20px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+
+            .hero h2 {
+                font-size: 23px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .welcome h2,
+            .courses-section h2,
+            .why-section h2 {
+                font-size: 34px;
+            }
+
+            .stat-box,
+            .course-card,
+            .why-box {
+                width: 90%;
+                max-width: 320px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+        <a href="index.html">HOME</a>
+
+        <a href="about.html">ABOUT</a>
+
+        <a href="courses.html">COURSES</a>
+
+        <a href="contact.html">CONTACT</a>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <h1>MFK GENIUS ACADEMY</h1>
+
+        <h2>Learn Today, Build Tomorrow</h2>
+
+        <p>
+            Welcome to MFK GENIUS ACADEMY — a learning platform
+            designed to make difficult concepts simple, clear
+            and easy to understand.
+        </p>
+
+        <a href="courses.html" class="hero-button">
+            Explore Our Courses
+        </a>
+
+    </section>
+
+
+    <!-- WELCOME -->
+
+    <section class="welcome">
+
+        <h2>Welcome to MFK GENIUS ACADEMY</h2>
+
+        <p>
+            We believe that every student can achieve more with
+            proper guidance, quality notes, clear concepts and
+            consistent learning.
+        </p>
+
+    </section>
+
+
+    <!-- STATS -->
+
+    <section class="stats">
+
+        <div class="stat-box">
+            <h3>4+</h3>
+            <p>Major Subjects</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>100%</h3>
+            <p>Learning Focus</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>24/7</h3>
+            <p>Learning Resources</p>
+        </div>
+
+        <div class="stat-box">
+            <h3>∞</h3>
+            <p>Possibilities</p>
+        </div>
+
+    </section>
+
+
+    <!-- COURSES -->
+
+    <section class="courses-section">
+
+        <h2>Our Courses</h2>
+
+        <p class="section-description">
+            Explore our major academic subjects.
+        </p>
+
+
+        <div class="course-card">
+
+            <div class="course-icon">📐</div>
+
+            <h3>Mathematics</h3>
+
+            <p>
+                Learn mathematics through simple explanations,
+                formulas and practice.
+            </p>
+
+            <a href="math.html" class="course-link">
+                View Course
+            </a>
+
+        </div>
+
+
+        <div class="course-card">
+
+            <div class="course-icon">⚡</div>
+
+            <h3>Physics</h3>
+
+            <p>
+                Understand physics concepts, formulas,
+                mechanics and applications.
+            </p>
+
+            <a href="physics.html" class="course-link">
+                View Course
+            </a>
+
+        </div>
+
+
+        <div class="course-card">
+
+            <div class="course-icon">🧪</div>
+
+            <h3>Chemistry</h3>
+
+            <p>
+                Explore reactions, equations, concepts
+                and important chemistry topics.
+            </p>
+
+            <a href="chemistry.html" class="course-link">
+                View Course
+            </a>
+
+        </div>
+
+
+        <div class="course-card">
+
+            <div class="course-icon">🧬</div>
+
+            <h3>Biology</h3>
+
+            <p>
+                Explore life sciences, cells, genetics,
+                ecology and human biology.
+            </p>
+
+            <a href="biology.html" class="course-link">
+                View Course
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- WHY CHOOSE US -->
+
+    <section class="why-section">
+
+        <h2>Why Choose MFK GENIUS ACADEMY?</h2>
+
+
+        <div class="why-box">
+
+            <div class="course-icon">📚</div>
+
+            <h3>Simple Learning</h3>
+
+            <p>
+                Difficult concepts are explained in a simple
+                and understandable way.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <div class="course-icon">📝</div>
+
+            <h3>Quality Notes</h3>
+
+            <p>
+                Organized notes help students revise important
+                topics more effectively.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <div class="course-icon">💡</div>
+
+            <h3>Clear Concepts</h3>
+
+            <p>
+                We focus on understanding concepts instead of
+                simply memorizing them.
+            </p>
+
+        </div>
+
+
+        <div class="why-box">
+
+            <div class="course-icon">🚀</div>
+
+            <h3>Modern Learning</h3>
+
+            <p>
+                We use digital tools and modern methods to
+                improve the learning experience.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FINAL CTA -->
+
+    <section class="cta">
+
+        <h2>Ready to Start Learning?</h2>
+
+        <p>
+            Explore our courses and begin your learning journey
+            with MFK GENIUS ACADEMY.
+        </p>
+
+        <a href="courses.html" class="hero-button">
+            Start Learning
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 MFK GENIUS ACADEMY
+        </p>
+
+        <p>
+            Learn Today • Build Tomorrow
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
