@@ -29,7 +29,7 @@
 
         .math-page {
             text-align: center;
-            padding: 80px 20px;
+            padding: 70px 20px;
         }
 
         .math-page h1 {
@@ -37,7 +37,7 @@
             font-size: 50px;
         }
 
-        .math-page p {
+        .math-page > p {
             font-size: 22px;
             line-height: 1.6;
         }
@@ -61,21 +61,83 @@
         .topic-box h2 {
             color: darkblue;
         }
-.back-button {
-    display: inline-block;
-    background-color: blue;
-    color: white;
-    text-decoration: none;
-    padding: 15px 35px;
-    border-radius: 10px;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 30px;
-}
 
-.back-button:hover {
-    background-color: darkblue;
-}
+        .guess-box {
+            background: linear-gradient(135deg, #ffffff, #eaf2ff);
+            border: 3px solid darkblue;
+            width: 330px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 25px 15px;
+            padding: 30px;
+            border-radius: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .guess-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+        }
+
+        .guess-box h2 {
+            color: darkblue;
+            font-size: 26px;
+        }
+
+        .guess-box p {
+            font-size: 17px;
+            line-height: 1.5;
+        }
+
+        .guess-button {
+            display: inline-block;
+            background-color: darkblue;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .guess-button:hover {
+            background-color: blue;
+        }
+
+        .back-button {
+            display: inline-block;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            padding: 15px 35px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 30px;
+        }
+
+        .back-button:hover {
+            background-color: darkblue;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 8px;
+                font-size: 16px;
+            }
+
+            .math-page h1 {
+                font-size: 40px;
+            }
+
+            .topic-box,
+            .guess-box {
+                width: 80%;
+                max-width: 330px;
+            }
+        }
     </style>
 </head>
 
@@ -111,7 +173,29 @@
             <h2>Trigonometry</h2>
             <p>Learn trigonometric ratios and their applications.</p>
         </div>
-<a href="courses.html" class="back-button">← Back to Courses</a>
+
+        <!-- MATH GUESS PAPER -->
+
+        <div class="guess-box">
+            <h2>📘 MFK Math Guess Paper</h2>
+
+            <p>
+                FBISE Mathematics SSC-I Guess & Exam Guide.
+                Includes chapter priorities, short questions,
+                long questions, practice paper and revision checklist.
+            </p>
+
+            <a href="math-guess-paper.html" class="guess-button">
+                OPEN GUESS PAPER
+            </a>
+        </div>
+
+        <br>
+
+        <a href="courses.html" class="back-button">
+            ← Back to Courses
+        </a>
+
     </div>
 
 </body>
